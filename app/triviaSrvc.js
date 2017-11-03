@@ -12,8 +12,8 @@ angular.module('trivia').service('triviaSrvc', function($http){
         })
     }
 
-    this.addTrivia = function(){
-        return $http.post('/api/trivia/questions').then(response =>{
+    this.addTrivia = function(body){
+        return $http.post('/api/trivia/questions', body).then(response =>{
             return response.data
         })
     }
