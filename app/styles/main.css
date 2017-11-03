@@ -138,6 +138,7 @@ html {
     background: white;
     border: none;
     box-shadow: 5px 5px 7px #D3D3D3;
+    border-radius: 2px;
 }
 
 .trivia-question:hover {
