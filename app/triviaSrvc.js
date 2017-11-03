@@ -1,42 +1,42 @@
-angular.module('trivia').service('triviaSrvc', function($http){
+angular.module('trivia').service('triviaSrvc', function ($http) {
 
-    this.getTrivia = function(){
-        return $http.get('/api/trivia/questions').then(response => {
-            return response.data;
+    this.getQuestions = function () {
+        return $http.get('https://practiceapi.devmountain.com/api/trivia/questions').then(resp => {
+            return resp.data;
         })
     }
 
-    this.getTriviaDiff = function(difficulty){
-        return $http.get(`/api/trivia/questions/difficulty/${difficulty}`).then(response => {
+    this.getByDifficulty = function (difficulty) {
+        return $http.get(`https://practiceapi.devmountain.com/api/trivia/questions/difficulty/${difficulty}`).then(response => {
             return response.data
         })
     }
 
-    this.addTrivia = function(body){
-        return $http.post('/api/trivia/questions', body).then(response =>{
+    this.addQuestion = function(question) {
+        return $http({
+            method: 'POST',
+            url: 'https://practiceapi.devmountain.com/api/trivia/questions',
+            data: question
+        }).then(function(response) {
+            console.log(response.data)        
+          return response.data;
+        }).catch( err => {
+            console.log('error adding new question', err)
+        })
+      }
+
+    this.editQuestion = function (id) {
+        return $http.put(`https://practiceapi.devmountain.com/api/trivia/questions${id}`).then(response => {
             return response.data
         })
     }
 
-    this.editTrivia = function(id){
-        return $http.put(`/api/trivia/questions${id}`).then(response => {
-            return response.data
-        })
-    }
-
-    this.deleteTrivia = function(id){
-        return $http.delete(`api/trivia/questions/${id}`).then(response =>{
+    this.deleteQuestion = function (id) {
+        return $http.delete(`https://practiceapi.devmountain.com/api/trivia/questions/${id}`).then(response => {
             response.data
         })
     }
-
-  this.getQuestions = function(){
-    return $http.get('https://practiceapi.devmountain.com/api/trivia/questions').then( resp =>{
-        return resp.data;
-    }).catch( err=>{
-        console.log('Error getting questions', err)
-    })
-}
+    
 })
 
 /* bring these into the controller. pass through the corresponding data. Example: 
