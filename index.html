@@ -17,13 +17,13 @@
     <div class="trivia-container">
         <div class="btn-container">
             <button>All Questions</button>
-            <button>Easy</button>
-            <button>Medium</button>
-            <button>Hard</button>
-            <button>Search by Animal</button>
+            <button ng-click="getByDifficulty(1)">Easy</button>
+            <button ng-click="getByDifficulty(2)">Medium</button>
+            <button ng-click="getByDifficulty(3)">Hard</button>
+            <button ng-click="toggleSearch()">Search by Animal</button>
         </div>
-        <input type="text" placeholder="Animal to search by..."/>
-        
+        <input ng-model="search.animal" type="text" placeholder="Animal to search by..."/>
+
         <div>
         <trivia-holder></trivia-holder>
         </div>
