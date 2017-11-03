@@ -24,8 +24,8 @@
         </div>
         <input type="text" placeholder="Animal to search by..."/>
         
-        <div class="trivia-question">
-
+        <div ng-repeat="question in questions" class="trivia-question">
+            <trivia-holder></trivia-holder>
         </div>
 
     </div>
