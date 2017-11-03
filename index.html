@@ -31,6 +31,8 @@
 
     </div>
     <div class="modal" ng-show="modalOpen">
+        <div class="cover">
+          <div>
             <form>
               <h4 class="close" ng-click="closeModal()">X</h4>
         
@@ -67,16 +69,18 @@
               <!-- Buttons when adding Question -->
               <div class="buttons" ng-show="addingNew">
                 <button class="green" ng-click="addQuestion(currentQuestion)" ng-click="getQuestions()">Save Question</button>
-                <button ng-click="closeModal()">Cancel</button>
+                <button class="grey-btn" ng-click="closeModal()">Cancel</button>
               </div>
               <!-- Buttons when editing -->
-              <div class="buttons" ng-show="editing">
+              <div id="bottom" class="buttons" ng-show="editing">
                 <button class="red" ng-click="deleteQuestion(currentQuestion._id)">Delete Question</button>
                 <button class="green" ng-click="updateQuestion(currentQuestion)">Save Changes</button>
-                <button ng-click="closeModal()">Cancel</button>
+                <button class="grey-btn" ng-click="closeModal()">Cancel</button>
               </div>
             </form>
-          </div>
+        </div>
+      </div>
+    </div>
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js" charset="utf-8"></script>

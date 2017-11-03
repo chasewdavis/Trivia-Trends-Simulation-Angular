@@ -43,12 +43,12 @@
     align-items: center;
     border-radius: 2px;
     color: white;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-.difficulty:hover {
+/* .difficulty:hover {
     box-shadow: 0 0 10px #C0C0C0;
-}
+} */
 
 .answer-container {
     position: absolute;

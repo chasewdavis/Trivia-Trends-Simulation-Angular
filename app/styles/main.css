@@ -95,9 +95,9 @@ html {
 
 .trivia-container {
     position: absolute;
-    left: 22.5%;
+    left: 25%;
     background: #E7E7E7;
-    width: 55%;
+    width: 50%;
     /* height: 100%; */
 }
 
@@ -129,4 +129,89 @@ html {
 
 .btn-container button:nth-last-child(1){
     border-right: none;
+}
+
+/*  model   */
+
+.cover {
+    position:fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.2);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cover div:nth-child(1) {
+    width: 50%;
+    position: absolute;
+    height: 600px;
+    left: 25%;
+    top:50%;
+    transform: translateY(-300px);
+    background:#E7E7E7;
+    border-radius: 3px;
+    padding: 35px;
+    box-shadow: 0 0 55px rgba(0,0,0,.3);
+}
+
+form .close {
+    /* background: green; */
+    text-align: right;
+    color:#686868;
+    font-size: 25px;
+    position: absolute;
+    right: 35px;
+    top:20px;
+}
+
+form input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    box-shadow: inset 0 0 7px #E7E7E7;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+form span {
+    /* border:1px solid; */
+}
+
+.range input {
+    width: 33.3%;
+    margin: 25px 0;
+}
+.range h5 {
+    width: 33.3%;
+    /* background: white; */
+    text-align: center;
+}
+
+#bottom {
+    border: 4px solid green;
+}
+
+.green, .red, .grey-btn {
+    position: absolute;
+    bottom: 35px;
+}
+
+.green {
+    height: 30px;
+    background: #4FC78B;
+    border: none;
+    border-radius: 2px;
+}
+
+.red {
+    height: 30px;
+}
+
+.grey-btn {
+    height: 30px;
+    bottom: 35px;
+    left: 125px;
+    border: none;
+    border-radius:2px;
 }
