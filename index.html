@@ -9,14 +9,29 @@
 </head>
 <body>
 
-    <nav>
-
+    <nav class="header">
+        <h1>Trivia Trends</h1>
         <button>+ Add Question</button>
-
     </nav>
 
+    <div class="trivia-container">
+        <div class="btn-container">
+            <button>All Questions</button>
+            <button>Easy</button>
+            <button>Medium</button>
+            <button>Hard</button>
+            <button>Serach by Animal</button>
+        </div>
+        <input type="text" placeholder="Animal to serch by..."/>
+        
+        <div class="trivia-question">
+
+        </div>
+
+    </div>
+
     <ui-view>
-        Anything you put in here will get replaced when the site loads. Like loading animations :)
+        
     </ui-view>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" charset="utf-8"></script>
