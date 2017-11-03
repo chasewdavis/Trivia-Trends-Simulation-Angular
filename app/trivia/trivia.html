@@ -1,2 +1,5 @@
+<!-- ng-repeat="question in questions" class="trivia-question" -->
 
-{{gc.questions}}
+<div ng-repeat="question in gc.questions" class="trivia-question">
+    <div class="question-header">{{question.question}}</div>
+</div>

@@ -1,0 +1,22 @@
+
+.trivia-question {
+    overflow: hidden;
+    color:green;
+    width: 95%;
+    margin: 15px 2.5%;
+    height: 200px;
+    background: white;
+    border: none;
+    box-shadow: 5px 5px 7px #D3D3D3;
+    border-radius: 2px;
+    padding: 15px;
+}
+
+.trivia-question:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 20px #C0C0C0
+}
+
+.question-header {
+    
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/app/styles/main.css">
+    <link rel="stylesheet" href="/app/trivia/trivia.css">
     <title>Trivia Trends</title>
 </head>
 <body ng-controller="triviaCtrl">
@@ -23,7 +24,7 @@
         </div>
         <input type="text" placeholder="Animal to search by..."/>
         
-        <div ng-repeat="question in questions" class="trivia-question">
+        <div>
         <trivia-holder></trivia-holder>
         </div>
         
