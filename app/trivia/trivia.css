@@ -1,10 +1,10 @@
 
 .trivia-question {
+    position: relative;
     overflow: hidden;
-    color:green;
     width: 95%;
     margin: 15px 2.5%;
-    height: 200px;
+    height: 180px;
     background: white;
     border: none;
     box-shadow: 5px 5px 7px #D3D3D3;
@@ -13,10 +13,84 @@
 }
 
 .trivia-question:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 5px 5px 20px #C0C0C0
 }
 
 .question-header {
-    
+    position: absolute;
+    left: 0;
+    /* border: 1px solid black; */
+    width:95%;
+    margin: 0 2.5%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 29px;
+}
+
+.difficulty {
+    position: absolute;
+    right: 0;
+    top:0;
+    background: #E9558B;
+    width: 65px;
+    font-size: 14px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.difficulty:hover {
+    box-shadow: 0 0 10px #C0C0C0;
+}
+
+.answer-container {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    /* border: 1px solid green; */
+    width:95%;
+    height: 100px;
+    margin: 0 2.5%;
+}
+
+.answer-container div {
+    position: absolute;
+    height: 45%;
+    width: 45%;
+    border: 3px solid #E9558B;
+    /* background: #E9558B; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color:#E9558B;
+}
+
+.answer-container div:hover {
+    background: #E9558B;
+    box-shadow: 0 0 10px #C0C0C0;
+    color: white;
+}
+
+.answer-container div:nth-child(1) {
+    top:0;
+}
+.answer-container div:nth-child(2) {
+    bottom:0;
+}
+.answer-container div:nth-child(3) {
+    top:0;
+    right: 0;
+}
+.answer-container div:nth-child(4) {
+    right: 0;
+    bottom:0;
 }
