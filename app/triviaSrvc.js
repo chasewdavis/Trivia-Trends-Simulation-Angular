@@ -29,6 +29,14 @@ angular.module('trivia').service('triviaSrvc', function($http){
             response.data
         })
     }
+
+  this.getQuestions = function(){
+    return $http.get('https://practiceapi.devmountain.com/api/trivia/questions').then( resp =>{
+        return resp.data;
+    }).catch( err=>{
+        console.log('Error getting questions', err)
+    })
+}
 })
 
 /* bring these into the controller. pass through the corresponding data. Example: 

@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="/app/styles/main.css">
     <title>Trivia Trends</title>
 </head>
-<body>
-
+<body ng-controller="triviaCtrl">
     <nav class="header">
         <h1>Trivia Trends</h1>
         <button>+ Add Question</button>
@@ -24,15 +23,12 @@
         </div>
         <input type="text" placeholder="Animal to search by..."/>
         
-        
-        <trivia-holder class="trivia-question"></trivia-holder>
+        <div ng-repeat="question in questions" class="trivia-question">
+        <trivia-holder></trivia-holder>
+        </div>
         
 
     </div>
-
-    <ui-view>
-        
-    </ui-view>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js" charset="utf-8"></script>
@@ -40,6 +36,7 @@
     <script src="app/trivia/trivia.html" charset="utf-8"></script>
     <script src="app/trivia/triviaCtrl.js" charset="utf-8"></script>
     <script src="app/trivia/trivia.js" charset="utf-8"></script>
+    <script src="app/triviaSrvc.js" charset="utf-8"></script>
 
 </body>
 </html>

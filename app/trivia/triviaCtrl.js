@@ -4,11 +4,11 @@
 
 angular.module('trivia')
     .controller('triviaCtrl', function ($scope, triviaSrvc) {
-        $scope.getQuestions = function () {
-            triviaSrvc.getTrivia().then(function (response) {
-                $scope.questions = response
-            })
-        }
+
+        triviaSrvc.getQuestions().then( questions => {
+            $scope.questions = questions
+            console.log(questions)
+        })
         
         $scope.addQuestion = function(newQuestion){
             triviaSrvc.addTrivia(newQuestion).then(function(response){
