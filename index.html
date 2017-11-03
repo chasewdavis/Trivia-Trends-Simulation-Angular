@@ -11,7 +11,7 @@
 <body ng-controller="triviaCtrl">
     <nav class="header">
         <h1>Trivia Trends</h1>
-        <button>+ Add Question</button>
+        <button ng-click="openModal()">+ Add Question</button>
     </nav>
 
     <div class="trivia-container">
@@ -30,7 +30,54 @@
         
 
     </div>
-
+    <div class="modal" ng-show="modalOpen">
+            <form>
+              <h4 class="close" ng-click="closeModal()">X</h4>
+        
+              <span>Question</span>
+              <input type="text" ng-model="currentQuestion.question">
+        
+              <span>Animal it's about</span>
+              <input type="text" ng-model="currentQuestion.animal">
+        
+              <span>Difficulty</span>
+              <div class="range">
+                <input type="range" min="1" max="3" ng-model="currentQuestion.difficulty">
+                <h5>{{currentQuestion.difficulty}}</h5>
+              </div>
+        
+              <h4>Options</h4>
+              <div>
+                <input type="radio" ng-model="currentQuestion.correct_answer" value="1">
+                <input type="text" ng-model="currentQuestion.options[1]">
+              </div>
+              <div>
+                <input type="radio" ng-model="currentQuestion.correct_answer" value="2">
+                <input type="text" ng-model="currentQuestion.options[2]">
+              </div>
+              <div>
+                <input type="radio" ng-model="currentQuestion.correct_answer" value="3">
+                <input type="text" ng-model="currentQuestion.options[3]">
+              </div>
+              <div>
+                <input type="radio" ng-model="currentQuestion.correct_answer" value="4">
+                <input type="text" ng-model="currentQuestion.options[4]">
+              </div>
+        
+              <!-- Buttons when adding Question -->
+              <div class="buttons" ng-show="addingNew">
+                <button class="green" ng-click="addQuestion(currentQuestion)" ng-click="getQuestions()">Save Question</button>
+                <button ng-click="closeModal()">Cancel</button>
+              </div>
+              <!-- Buttons when editing -->
+              <div class="buttons" ng-show="editing">
+                <button class="red" ng-click="deleteQuestion(currentQuestion._id)">Delete Question</button>
+                <button class="green" ng-click="updateQuestion(currentQuestion)">Save Changes</button>
+                <button ng-click="closeModal()">Cancel</button>
+              </div>
+            </form>
+          </div>
+        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js" charset="utf-8"></script>
     <script src="app/app.js"></script>
